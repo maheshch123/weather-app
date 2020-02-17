@@ -1,1 +1,1 @@
-# weather-app
+# created a weather app using openweathermap API
