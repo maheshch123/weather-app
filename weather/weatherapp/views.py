@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import requests
+From pprint import pprint
 
 # Create your views here
 
@@ -8,7 +9,7 @@ def index(request):
         url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&APPID=3842242fbbed128879e5973bbc483a75'
         city = request.GET.get('city')
         r= requests.get(url.format(city)).json()
-        Print(r)
+        PPrint(r)
         weather = {
             'city': city,
             'temperature': r['main']['temp'],
